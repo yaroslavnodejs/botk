@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pastebin на localhost</title>
+</head>
+<body>
+    <h2>Создать пасту</h2>
+    <form action="/create" method="post">
+        <textarea name="text" rows="10" cols="50" placeholder="Введите ваш текст здесь"></textarea><br/>
+        <button type="submit">Создать пасту</button>
+    </form>
+    {% if message %}
+      <p><b>{{ message }}</b></p>
+      <p>Просмотреть пасту: <a href="/paste/{{ paste_id }}">Перейти по ссылке</a></p>
+    {% endif %}
+</body>
+</html>
